@@ -79,7 +79,7 @@ app.get('/', (req, res) => {
           <h1>إدخال كود الطالب</h1>
           <form action="/student" method="post">
             <input type="text" name="code" placeholder="أدخل كود الطالب" required>
-            <button type="submit">إرسال</button>
+            <button type="submit">عرض النتيجة</button>
             <p class ="styled-paragraph">هذا البرنامج تم تطويره بواسطة م/ عبدالرحمن، عضو فريق Tadaima</p>
           </form>
         </div>
@@ -158,7 +158,7 @@ app.post('/student', (req, res) => {
           <td>${student.Name}</td>
         </tr>
         <tr>
-          <td><strong>الدرجة:</strong></td>
+          <td><strong>ا:<لإختبار الأول/strong></td>
           <td>${student.Grade}</td>
         </tr>
       </table>
