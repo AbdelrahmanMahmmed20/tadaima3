@@ -158,7 +158,7 @@ app.post('/student', (req, res) => {
           <td>${student.Name}</td>
         </tr>
         <tr>
-          <td><strong>ا:<لإختبار الأول/strong></td>
+          <td><strong>الاختبار الاول:</strong></td>
           <td>${student.Grade}</td>
         </tr>
       </table>
