@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   res.send(`
     <html>
       <head>
-        <title>درجات الطلبة</title>
+        <title>Tadaima</title>
         <style>
           body {
             font-family: Arial, sans-serif;
@@ -76,10 +76,10 @@ app.get('/', (req, res) => {
       </head>
       <body>
         <div class="container">
-          <h1>إدخال كود الطالب</h1>
+          <h1>إدخال كود المتدرب</h1>
           <form action="/student" method="post">
             <input type="text" name="code" placeholder="أدخل كود الطالب" required>
-            <button type="submit">عرض النتيجة</button>
+            <button type="submit">ارســال</button>
             <p class ="styled-paragraph">هذا البرنامج تم تطويره بواسطة م/ عبدالرحمن، عضو فريق Tadaima</p>
           </form>
         </div>
