@@ -99,7 +99,7 @@ app.post('/student', (req, res) => {
     res.send(`
 <html>
   <head>
-    <title>بيانات الطالب</title>
+    <title>Tadaima</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -131,7 +131,7 @@ app.post('/student', (req, res) => {
       th, td {
         border: 1px solid #ddd;
         padding: 8px;
-        text-align: right; /* محاذاة النص إلى اليمين */
+        text-align: right;
       }
       th {
         background-color: #4CAF50;
@@ -150,23 +150,21 @@ app.post('/student', (req, res) => {
   </head>
   <body>
     <div class="container">
-      <h1>بيانات الطالب</h1>
+    <h2>بيانات المتدرب: ${student.Name}</h2>
+      <h4>الكود: ${student.Code}</h4>
       <table>
         <tr>
-          <th>المعلومات</th>
-          <th>القيمة</th>
+          <th>العنصر</th>
+          <th>المحتوي</th>
         </tr>
+
         <tr>
-          <td><strong>الاسم:</strong></td>
-          <td>${student.Name}</td>
-        </tr>
-        <tr>
-          <td><strong>رابط الاختبار الأول:</strong></td>
+          <td><strong>الاختبار الأول:</strong></td>
           <td><a href="${testLinkOne}" target="_blank">اضغط هنا</a></td>
         </tr>
         <tr>
           <td><strong>نتيجة الاختبار الاول:</strong></td>
-          <td>${student.Grade}</td>
+          <td>15 / ${student.Grade1}</td>
         </tr>
       </table>
       <a href="/">رجوع</a>
@@ -206,7 +204,7 @@ app.post('/student', (req, res) => {
         <body>
           <div class="container">
             <h1>خطأ</h1>
-            <p>لا يوجد بيانات لهذا الطالب</p>
+            <p>لا يوجد بيانات لهذا المتدرب</p>
             <a href="/">رجوع</a>
           </div>
         </body>
