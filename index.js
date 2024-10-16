@@ -87,12 +87,15 @@ app.get('/', (req, res) => {
     </html>
   `);
 });
+
 app.post('/student', (req, res) => {
   const code = req.body.code;
   const students = readExcel();
   const student = students.find(s => s.Code == code);
 
   if (student) {
+    const testLinkOne = 'https://forms.gle/1qJbCRhptcj3MtYW9';
+    const sessionOne = '';
     res.send(`
 <html>
   <head>
@@ -158,7 +161,11 @@ app.post('/student', (req, res) => {
           <td>${student.Name}</td>
         </tr>
         <tr>
-          <td><strong>الاختبار الاول:</strong></td>
+          <td><strong>رابط الاختبار الأول:</strong></td>
+          <td><a href="${testLinkOne}" target="_blank">اضغط هنا</a></td>
+        </tr>
+        <tr>
+          <td><strong>نتيجة الاختبار الاول:</strong></td>
           <td>${student.Grade}</td>
         </tr>
       </table>
@@ -166,7 +173,6 @@ app.post('/student', (req, res) => {
     </div>
   </body>
 </html>
-
     `);
   } else {
     res.send(`
@@ -208,6 +214,8 @@ app.post('/student', (req, res) => {
     `);
   }
 });
+
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
