@@ -160,10 +160,9 @@ app.post('/student', (req, res) => {
           <th>المحتوي</th>
         </tr>
 
-        <tr>
-          <td><strong>الاختبار الأول:</strong></td>
-          <td><a href="${testLinkOne}" target="_blank">اضغط هنا</a></td>
-        </tr>
+     
+
+
         <tr>
           <td><strong>نتيجة الاختبار الاول:</strong></td>
           <td>15 / ${student.Grade1}</td>
