@@ -159,10 +159,6 @@ app.post('/student', (req, res) => {
           <th>العنصر</th>
           <th>المحتوي</th>
         </tr>
-
-     
-
-
         <tr>
           <td><strong>نتيجة الاختبار الاول:</strong></td>
           <td>15 / ${student.Grade1}</td>
