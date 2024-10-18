@@ -97,7 +97,7 @@ app.post('/student', (req, res) => {
 
   if (student) {
     const testLinkOne = 'https://forms.gle/1qJbCRhptcj3MtYW9';
-    const sessionOne = '';
+    const sessionOne = 'https://drive.google.com/file/d/1Z30Qn2d4FqMV7DmjZ77oJNJ7FbgngFw8/view?usp=sharing';
     res.send(`
 <html>
   <head>
@@ -166,7 +166,10 @@ app.post('/student', (req, res) => {
           <td><a href="${testLinkOne}" target="_blank">اضغط هنا</a></td>
         </tr>
 
-
+        <tr>
+          <td><strong> أول سيشن:</strong></td>
+          <td><a href="${sessionOne}" target="_blank">اضغط هنا</a></td>
+        </tr>
 
 
       </table>
