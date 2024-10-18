@@ -78,7 +78,7 @@ app.get('/', (req, res) => {
         <div class="container">
           <h1>إدخال كود المتدرب</h1>
           <form action="/student" method="post">
-            <input type="text" name="code" placeholder="أدخل كود الطالب" required>
+            <input type="text" name="code" placeholder="أدخل الكود " required>
             <button type="submit">ارســال</button>
             <p class ="styled-paragraph">هذا البرنامج تم تطويره بواسطة م/ عبدالرحمن، عضو فريق Tadaima</p>
           </form>
@@ -159,10 +159,16 @@ app.post('/student', (req, res) => {
           <th>العنصر</th>
           <th>المحتوي</th>
         </tr>
+        
+        
         <tr>
-          <td><strong>نتيجة الاختبار الاول:</strong></td>
-          <td>15 / ${student.Grade1}</td>
+          <td><strong>الاختبار الأول:</strong></td>
+          <td><a href="${testLinkOne}" target="_blank">اضغط هنا</a></td>
         </tr>
+
+
+
+
       </table>
       <a href="/">رجوع</a>
     </div>
