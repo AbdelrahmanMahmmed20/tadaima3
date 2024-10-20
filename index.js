@@ -98,6 +98,7 @@ app.post('/student', (req, res) => {
   if (student) {
     const testLinkOne = 'https://forms.gle/1qJbCRhptcj3MtYW9';
     const sessionOne = 'https://drive.google.com/file/d/1Z30Qn2d4FqMV7DmjZ77oJNJ7FbgngFw8/view?usp=sharing';
+    const sessionTwo = 'https://drive.google.com/drive/folders/1OvE_1aICxH3Rnganaw2tfE0ieftvL93t?usp=drive_link';
     res.send(`
 <html>
   <head>
@@ -163,9 +164,14 @@ app.post('/student', (req, res) => {
         
         <tr>
           <td><strong>الاختبار الأول:</strong></td>
-          <td><a href="${testLinkOne}" target="_blank">اضغط هنا</a></td>
+          <td><a href="${testLinkOne}" target="_blank">غير مفعل الان</a></td>
         </tr>
 
+        <tr>
+          <td><strong>نتيجة الاختبار الاول:</strong></td>
+          <td>15 / ${student.Grade1}</td>
+        </tr>
+        
         <tr>
           <td><strong> أول سيشن:</strong></td>
           <td><a href="${sessionOne}" target="_blank">اضغط هنا</a></td>
@@ -173,6 +179,7 @@ app.post('/student', (req, res) => {
 
 
       </table>
+      <p>عدد الكويزات اللي دخلتها: ${student.ExamsNumber}</p>
       <a href="/">رجوع</a>
     </div>
   </body>
