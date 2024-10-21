@@ -177,6 +177,11 @@ app.post('/student', (req, res) => {
           <td><a href="${sessionOne}" target="_blank">اضغط هنا</a></td>
         </tr>
 
+        <tr>
+          <td><strong> ثاني سيشن:</strong></td>
+          <td><a href="${sessionTwo}" target="_blank">اضغط هنا</a></td>
+        </tr>
+
 
       </table>
       <p>عدد الكويزات اللي دخلتها: ${student.ExamsNumber}</p>
